@@ -6,22 +6,18 @@
 
 class UMyAmmoConfig;
 
-// Sets default values
 ABaseClass::ABaseClass()
 {
-	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	AmmoObject = CreateDefaultSubobject<UMyAmmoConfig>("UMyAmmoConfig");
+	AmmoObject = AmmoTSubClass;
 }
 
-// Called when the game starts or when spawned
 void ABaseClass::BeginPlay()
 {
 	Super::BeginPlay();
 	
 }
 
-// Called every frame
 void ABaseClass::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);

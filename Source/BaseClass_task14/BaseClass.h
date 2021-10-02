@@ -13,13 +13,10 @@ class BASECLASS_TASK14_API ABaseClass : public AActor
 	GENERATED_BODY()
 	
 public:	
-	// Sets default values for this actor's properties
 	ABaseClass();
 
 protected:
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-	UMyAmmoConfig* InstantiateObject;
 
 public:	
 	// Called every frame
@@ -34,6 +31,6 @@ public:
 	UPROPERTY(EditAnywhere, Category = "SubClass")
 	TSubclassOf<UMyAmmoConfig> AmmoTSubClass;
 
-	UPROPERTY(VisibleAnywhere, Category = "SubClass")
+	UPROPERTY(EditAnywhere, Category = "SubClass")
 	UObject* AmmoObject;
 };
