@@ -29,8 +29,5 @@ public:
 	void PrintSomeFloatParam();
 
 	UPROPERTY(EditAnywhere, Category = "SubClass")
-	TSubclassOf<UMyAmmoConfig> AmmoTSubClass;
-
-	UPROPERTY(EditAnywhere, Category = "SubClass")
-	UObject* AmmoObject;
+	TSubclassOf<UMyAmmoConfig> AmmoType;
 };

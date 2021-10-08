@@ -9,13 +9,12 @@ class UMyAmmoConfig;
 ABaseClass::ABaseClass()
 {
 	PrimaryActorTick.bCanEverTick = true;
-	AmmoObject = AmmoTSubClass;
 }
 
 void ABaseClass::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	UMyAmmoConfig* Bullet = NewObject<UMyAmmoConfig>(this, AmmoType);
 }
 
 void ABaseClass::Tick(float DeltaTime)
